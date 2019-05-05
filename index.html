@@ -62,59 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-异常处理" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/05/05/异常处理/" class="article-date">
-  <time datetime="2019-05-05T08:19:05.000Z" itemprop="datePublished">2019-05-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/05/05/异常处理/">异常处理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="异常处理流程"><a href="#异常处理流程" class="headerlink" title="异常处理流程"></a>异常处理流程</h2><p>系统对异常的处理需要使用统一的异常处理流程：</p>
-<ol>
-<li>自定义异常类型</li>
-<li>自定义错误代码以及错误信息</li>
-<li>对于可预知的异常由程序员在代码中主动抛出，由Spring MVC统一捕获。</li>
-<li>对于不可预知的异常（运行时异常）由Spring MVC统一捕获Exception类型的异常</li>
-<li>可预知的异常及不可预知的运行时异常最终会采用统一的信息格式（错误代码+错误信息）来表示，最终也会随请求响应给客户端</li>
-</ol>
-<p>异常抛出及处理流程：</p>
-<p><img src="https://github.com/lx940112/picture-of-note/blob/master/ExceptionHandling/flowChart.png" alt="avatar"></p>
-<ol>
-<li>在controller、service、dao中程序员抛出自定义异常；springMVC框架抛出框架异常类型</li>
-<li>统一由异常捕获类捕获异常，并进行处理</li>
-<li>捕获到自定义异常则直接取出错误代码及错误信息，响应给用户</li>
-<li>捕获到非自定义异常类型首先从Map中找该异常类型是否对应具体的错误代码，如果有则取出错误代码和错误<br>信息并响应给用户，如果从Map中找不到异常类型所对应的错误代码则统一为99999错误代码并响应给用户 </li>
-<li>将错误代码及错误信息以Json格式响应给用户 </li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/05/异常处理/" data-id="cjvao30ry00024cvt0xu2oasu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-article-title" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/12/10/article-title/" class="article-date">
@@ -141,7 +88,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/10/article-title/" data-id="cjvao30rt00014cvt783bfiko" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/10/article-title/" data-id="cjvao7aew0000covtgxqru67r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/12/10/hello-world/" data-id="cjvao30rq00004cvtax2riwmw" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/12/10/hello-world/" data-id="cjvao7afd0001covtmahdj2j2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -214,7 +161,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li></ul>
     </div>
   </div>
 
@@ -225,10 +172,6 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
-        
-          <li>
-            <a href="/2019/05/05/异常处理/">异常处理</a>
-          </li>
         
           <li>
             <a href="/2018/12/10/article-title/">article title</a>
